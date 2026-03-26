@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LibraryConnect Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">LibrarianConnect</div>
+        <div class="nav-links">
+            <a href="library.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="loans.html">Loans</a>
+            <a href="books.html">Books</a>
+        </div>
+    </div>
+
+    <div class="container" style="padding: 2rem; text-align: center;">
+        <input type="checkbox" id="toggleoverdue">
+        <label for="toggleoverdue" class="overdue-btn">View Overdue Records</label>
+
+        <div id="overdueBox" class="info-box">
+            <h2>Overdue Records</h2>
+            <p><strong>Cart Bincent Menor:</strong> Atomic Habits (Due: Mar 1)</p>
+            <p><strong>Myeong San Diego:</strong> How to look handsome (Due: Feb 14)</p>
+        </div>
+    </div>
+
+    <section class="features">
+        <h2>System Features</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div class="feature-card"><h3>🔎 Books</h3><p>Manage the library catalog.</p></div>
+            <div class="feature-card"><h3>👥 Members</h3><p>Manage student accounts.</p></div>
+            <div class="feature-card"><h3>📅 Loans</h3><p>Track borrowed items.</p></div>
+        </div>
+    </section>
+</body>
+</html>

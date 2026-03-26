@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoices - LedgerFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo">LedgerFlow</a>
+      <ul class="nav-links">
+        <li><a href="invoices.html" class="nav-link">Invoices</a></li>
+        <li><a href="clients.html" class="nav-link">Clients</a></li>
+        <li><a href="pay.html" class="nav-link">Pay</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Invoices</h1>
+    </div>
+
+    <div class="invoice-list-container">
+      <div class="invoice-row">
+        <div class="inv-info">
+          <div class="inv-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div>
+            <h3>#INV-001</h3>
+            <p>Acme Corporation</p>
+          </div>
+        </div>
+        <div class="inv-status">
+          <span class="status-badge status-paid">Paid</span>
+        </div>
+        <div class="inv-amount">$2,450.00</div>
+        <div class="inv-date">Due: 2024-01-20</div>
+        <div class="inv-actions">
+          <button class="icon-btn"><i class="fas fa-eye"></i></button>
+          <button class="icon-btn"><i class="fas fa-download"></i></button>
+        </div>
+      </div>
+
+      <div class="invoice-row">
+        <div class="inv-info">
+          <div class="inv-icon overdue"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div>
+            <h3>#INV-002</h3>
+            <p>Tech Solutions Ltd</p>
+          </div>
+        </div>
+        <div class="inv-status">
+          <span class="status-badge status-overdue">Overdue</span>
+        </div>
+        <div class="inv-amount">$1,890.00</div>
+        <div class="inv-date">Due: 2023-12-15</div>
+        <div class="inv-actions">
+          <button class="icon-btn"><i class="fas fa-eye"></i></button>
+          <button class="icon-btn"><i class="fas fa-bell"></i></button>
+        </div>
+      </div>
+
+      <div class="invoice-row">
+        <div class="inv-info">
+          <div class="inv-icon pending"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div>
+            <h3>#INV-003</h3>
+            <p>Global Trade Inc.</p>
+          </div>
+        </div>
+        <div class="inv-status">
+          <span class="status-badge status-pending">Pending</span>
+        </div>
+        <div class="inv-amount">$5,200.00</div>
+        <div class="inv-date">Due: 2024-02-01</div>
+        <div class="inv-actions">
+          <button class="icon-btn"><i class="fas fa-eye"></i></button>
+          <button class="icon-btn"><i class="fas fa-download"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pay - LedgerFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo">LedgerFlow</a>
+      <ul class="nav-links">
+        <li><a href="invoices.html" class="nav-link">Invoices</a></li>
+        <li><a href="clients.html" class="nav-link">Clients</a></li>
+        <li><a href="pay.html" class="nav-link">Pay</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Payment Portal</h1>
+    </div>
+
+    <div class="login-card" style="max-width: 600px; margin: 0 auto 3rem auto;">
+      <h3 style="margin-bottom: 1.5rem;">Record New Payment</h3>
+      <label>Select Invoice</label>
+      <select>
+        <option>#INV-002 - Tech Solutions Ltd ($1,890.00)</option>
+        <option>#INV-005 - Marketing Inc ($3,120.00)</option>
+      </select>
+      
+      <label>Payment Method</label>
+      <select>
+        <option>Bank Transfer</option>
+        <option>Credit Card</option>
+        <option>PayPal</option>
+      </select>
+
+      <label>Amount to Pay</label>
+      <input type="number" placeholder="0.00">
+      
+      <button class="btn" style="width: 100%; margin-top: 1rem;">
+        <i class="fas fa-credit-card"></i> Process Securely
+      </button>
+    </div>
+
+    <div class="page-header">
+      <h2>Recent Transactions</h2>
+    </div>
+
+    <div class="transaction-list-container">
+      <div class="transaction-row">
+        <div class="trans-info">
+          <div class="trans-icon"><i class="fas fa-arrow-down"></i></div>
+          <div>
+            <h3>Xeii Corporation</h3>
+            <p>Invoice #INV-001</p>
+          </div>
+        </div>
+        <div class="trans-method">Bank Transfer</div>
+        <div class="trans-amount" style="color: #00ff88;">+$2,450.00</div>
+        <div class="trans-date">2024-01-18</div>
+        <div class="trans-actions">
+          <button class="icon-btn"><i class="fas fa-receipt"></i></button>
+        </div>
+      </div>
+
+      <div class="transaction-row">
+        <div class="trans-info">
+          <div class="trans-icon pending"><i class="fas fa-clock"></i></div>
+          <div>
+            <h3>Global Trade Inc.</h3>
+            <p>Invoice #INV-003</p>
+          </div>
+        </div>
+        <div class="trans-method">Credit Card</div>
+        <div class="trans-amount">+$5,200.00</div>
+        <div class="trans-date">2024-01-15</div>
+        <div class="trans-actions">
+          <button class="icon-btn"><i class="fas fa-receipt"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

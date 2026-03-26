@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LedgerFlow - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-container"><a href="index.html" class="logo">LedgerFlow</a></div></nav>
+  <div class="container" style="max-width: 400px; margin-top: 50px;">
+    <div class="login-card">
+      <h2>Secure Access</h2>
+      <form id="loginForm">
+        <label>Admin ID</label><input type="text" placeholder="admin" required>
+        <label>Password</label><input type="password" placeholder="••••" required>
+        <button type="submit" id="secureBtn" class="btn" style="width: 100%;">Login</button>
+      </form>
+      <div id="otpSection" style="display: none; margin-top: 1rem;">
+        <p>Verification Code:</p>
+        <input type="text" placeholder="000000" style="text-align: center; letter-spacing: 5px;">
+        <button onclick="verifyOTP()" class="btn" style="width: 100%;">Verify</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

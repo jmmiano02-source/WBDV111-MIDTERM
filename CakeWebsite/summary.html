@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | Velvet Crust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Velvet Crust</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="summary.html">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 50px;">Your Selection</h1>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead style="text-align: left; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; color: #999;">
+                <tr>
+                    <th style="padding: 20px; border-bottom: 1px solid var(--border-light);">Product</th>
+                    <th style="padding: 20px; border-bottom: 1px solid var(--border-light);">Qty</th>
+                    <th style="padding: 20px; border-bottom: 1px solid var(--border-light);">Price</th>
+                    <th style="padding: 20px; border-bottom: 1px solid var(--border-light);"></th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        
+        <div style="margin-top: 60px; display: flex; justify-content: flex-end; align-items: baseline; gap: 40px;">
+            <div style="text-align: right;">
+                <span style="color: #999; text-transform: uppercase; font-size: 0.8rem;">Grand Total</span>
+                <h2 style="font-size: 2.5rem; margin: 10px 0;">$<span id="total-price">0</span></h2>
+            </div>
+            <button class="btn-cream" style="padding: 20px 50px;" onclick="alert('Checkout initiated.')">Checkout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

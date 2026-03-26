@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop | Velvet Crust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Velvet Crust</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="summary.html">Cart (<span id="cart-count">0</span>)</a>
+            <a href="login.html" style="border: 1px solid var(--deep-purple); padding: 8px 15px; border-radius: 4px;">Login</a>
+        </div>
+    </nav>
+
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-title" style="color: var(--deep-purple);">Confirm</h2>
+            <p id="modal-msg"></p>
+            <div id="qty-box" style="display:none; margin: 20px;">
+                <input type="number" id="item-qty" value="1" min="1" style="width: 60px; padding: 10px; border: 1px solid var(--border-light);">
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button id="modal-yes" class="btn-cream" style="flex:1">Confirm</button>
+                <button id="modal-no" class="btn-cream" style="flex:1; background: #eee; border-color: #eee; color: #333;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="font-size: 2.5rem; margin-bottom: 50px; font-weight: 300;">The Full Collection</h1>
+        <div class="grid" id="full-grid"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

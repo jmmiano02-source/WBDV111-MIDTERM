@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Velvet Crust | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Velvet Crust</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="summary.html">Cart (<span id="cart-count">0</span>)</a>
+            <a href="login.html" style="border: 1px solid var(--deep-purple); padding: 8px 15px; border-radius: 4px;">Login</a>
+        </div>
+    </nav>
+
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-title" style="color: var(--deep-purple);">Confirm</h2>
+            <p id="modal-msg"></p>
+            <div id="qty-box" style="display:none; margin: 20px;">
+                <input type="number" id="item-qty" value="1" min="1" style="width: 60px; padding: 10px; border: 1px solid var(--border-light);">
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="modal-yes" class="btn-cream" style="flex:1">Confirm</button>
+                <button id="modal-no" class="btn-cream" style="flex:1; background: #eee; border-color: #eee; color: #333;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="home">
+            <div style="display: flex; align-items: center; gap: 60px; padding: 40px 0;">
+                <div style="flex: 1;">
+                    <h1 style="font-size: 4rem; color: var(--deep-purple); line-height: 1; margin: 0;">Xeii's<br>Velvet.</h1>
+                    <p style="margin: 30px 0; font-size: 1.2rem; color: #777;">Discover an artist made, crusts and velvety centers designed for luxary taste.</p>
+                    <a href="shop.html" class="btn-cream">Explore Collection</a>
+                </div>
+                <div style="flex: 1;">
+                    <img id="carousel-img" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800" style="width: 100%; filter: grayscale(10%);">
+                </div>
+            </div>
+            
+            <h2 style="margin-top: 100px; font-weight: 300; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; border-bottom: 1px solid var(--border-light); padding-bottom: 15px;">Trending</h2>
+            <div class="grid" id="trending-grid" style="margin-top: 40px;"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve | Luna Vista</title>
+  <link href="https://fonts.googleapis.com" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="reservation-page">
+  <header class="topbar">
+    <a class="brand" href="index.html">Luna Vista<span>Resort</span></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="reservation-layout">
+    <section class="carousel-container">
+     <div class="carousel">
+  <div class="slide active"><img src="bg2.jpg"></div>
+  <div class="slide"><img src="bg3.jpg"></div>
+  <div class="slide"><img src="bg4.jpg"></div>
+  <button class="prev" id="prevBtn">&#10094;</button>
+  <button class="next" id="nextBtn">&#10095;</button>
+</div>
+      <div class="caption">
+        <h2>Private Oceanfront Sanctuary</h2>
+        <p>Preferred rates applied for 2026 bookings.</p>
+      </div>
+    </section>
+
+    <section class="reservation-card">
+      <h1>Secure Your Dates</h1>
+      <form class="reservation-form" id="bookingForm">
+        <div class="field-group">
+          <label>Accommodation</label>
+          <select required>
+            <option value="" disabled selected>Choose a room...</option>
+            <option>Deluxe Ocean Suite</option>
+            <option>Private Lagoon Villa</option>
+            <option>The Luna Penthouse</option>
+          </select>
+        </div>
+        <div class="two-col">
+          <div class="field-group">
+            <label>Check In</label>
+            <input type="date" required>
+          </div>
+          <div class="field-group">
+            <label>Check Out</label>
+            <input type="date" required>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Number of Guests</label>
+          <input type="number" min="1" max="6" value="2">
+        </div>
+        <button type="submit" class="btn-primary">Confirm Reservation</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

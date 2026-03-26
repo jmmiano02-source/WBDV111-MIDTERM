@@ -1,0 +1,239 @@
+:root {
+  --midnight: #04090e;
+  --sand: #f3dfc1;
+  --glass: rgba(10, 25, 41, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--midnight);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.topbar {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8%;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(4,9,14,0.8), transparent);
+}
+
+.brand {
+  color: var(--sand);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.brand span {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(4, 9, 14, 0.45), rgba(4, 9, 14, 0.45)), url('bg.jpg') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  display: block; 
+}
+
+.login-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 10;
+  background: rgba(10, 25, 41, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 3.5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 90%;
+  max-width: 440px;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.reservation-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 150px 5% 50px;
+  align-items: start;
+}
+
+.carousel {
+  position: relative; /* Required for absolute arrows */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.3); /* Subtle dark background */
+  border: none;
+  border-radius: 50%;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.next {
+  right: 15px; /* Spacing from right edge */
+}
+
+.prev {
+  left: 15px; /* Spacing from left edge */
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.next { right: 20px; }
+.prev { left: 20px; }
+
+.reservation-card {
+  background: var(--glass);
+  padding: 3rem;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--sand);
+  margin-bottom: 1.5rem;
+}
+
+.field-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--sand);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+input, select {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  color: #fff;
+  outline: none;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.btn-primary, .login-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, var(--sand), #c5a059);
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  color: var(--midnight);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.btn-primary:hover, .login-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(197, 160, 89, 0.3);
+}
+
+@media (max-width: 950px) {
+  .reservation-layout {
+    grid-template-columns: 1fr;
+    padding-top: 120px;
+  }
+  .carousel {
+    height: 350px;
+  }
+  
+}

@@ -1,0 +1,149 @@
+
+:root {
+    --bg-dark: #0b0a1a;
+    --card-bg: #16152b;
+    --primary-purple: #8e44ad;
+    --accent-purple: #a29bfe;
+    --text-main: #f0f0f0;
+    --text-dim: #b2bec3;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+.billing-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0b0a1a 100%);
+    border-bottom: 1px solid var(--glass);
+}
+
+.billing-hero h1 {
+    font-size: 2.5rem;
+    color: var(--accent-purple);
+    margin-bottom: 10px;
+}
+
+/* Container & Glass Card */
+.billing-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#billingTable {
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid var(--glass);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Table Header */
+#billingTable th {
+    background: rgba(142, 68, 173, 0.1);
+    color: var(--accent-purple);
+    text-align: left;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-purple);
+}
+
+/* Table Body Rows */
+#billingTable td {
+    padding: 20px;
+    border-bottom: 1px solid var(--glass);
+    color: var(--text-main);
+}
+
+/* Input Styling */
+.qty {
+    background: #000;
+    border: 1px solid var(--primary-purple);
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    width: 60px;
+    text-align: center;
+    outline: none;
+}
+
+.qty:focus {
+    box-shadow: 0 0 10px var(--primary-purple);
+}
+
+.subtotal {
+    font-weight: bold;
+    color: var(--accent-purple);
+    font-size: 1.1rem;
+}
+
+/* Bottom Total Section */
+.billing-total {
+    margin-top: 30px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--glass);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.billing-total h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#totalAmount {
+    color: var(--accent-purple);
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+
+#checkoutBtn {
+    background: linear-gradient(45deg, var(--primary-purple), var(--accent-purple));
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(142, 68, 173, 0.3);
+}
+
+#checkoutBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(162, 155, 254, 0.5);
+}
+
+
+.side-drawer {
+    display: none !important;
+}
+
+
+@media (max-width: 600px) {
+    #billingTable th:nth-child(2), 
+    #billingTable td:nth-child(2) {
+        display: none; /* Hide price on small mobile to save space */
+    }
+    
+    .billing-total {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

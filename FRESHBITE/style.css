@@ -1,0 +1,100 @@
+/* style.css */
+:root {
+    --bg-dark: #0b0a1a;
+    --card-bg: #16152b;
+    --primary-purple: #8e44ad;
+    --accent-purple: #a29bfe;
+    --text-main: #f0f0f0;
+    --text-dim: #b2bec3;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 10, 26, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--glass);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--accent-purple);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dim);
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent-purple); }
+
+/* Hero Sections */
+.hero, .food-hero, .plans-hero, .billing-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0b0a1a 100%);
+}
+
+
+.food-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 10%;
+}
+
+.food-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden; 
+    border: 1px solid var(--glass);
+    transition: 0.3s;
+}
+
+.food-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.food-info { padding: 20px; }
+
+
+.nutrient-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 350px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-purple);
+    z-index: 2000;
+    transition: 0.3s;
+}
+
+.nutrient-panel.active { transform: translate(-50%, -50%) scale(1); }

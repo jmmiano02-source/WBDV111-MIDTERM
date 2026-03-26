@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FreshBite Prep</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="billing.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">FreshBite Prep</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meal.html">Meals</a></li>
+        <li><a href="billing.html">Billing</a></li>
+        <li><a href="plans.html">Plan</a></li>
+    </ul>
+</nav>
+
+<section class="billing-hero">
+    <h1>Your Order Summary</h1>
+    <p>Adjust quantities and confirm your healthy choices.</p>
+</section>
+
+<section class="billing-container">
+    <div class="glass-card">
+        <table id="billingTable">
+            <thead>
+                <tr>
+                    <th>Meal Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Overnight Oats Bowl</td>
+                    <td data-price="450">₱450</td>
+                    <td><input type="number" min="0" value="0" class="qty"></td>
+                    <td class="subtotal">₱0</td>
+                </tr>
+                <tr>
+                    <td>Grilled Chicken & Rice</td>
+                    <td data-price="520">₱520</td>
+                    <td><input type="number" min="0" value="0" class="qty"></td>
+                    <td class="subtotal">₱0</td>
+                </tr>
+                <tr>
+                    <td>Fresh Veggie Salad Bowl</td>
+                    <td data-price="390">₱390</td>
+                    <td><input type="number" min="0" value="0" class="qty"></td>
+                    <td class="subtotal">₱0</td>
+                </tr>
+                <tr>
+                    <td>Healthy Chicken Wrap</td>
+                    <td data-price="480">₱480</td>
+                    <td><input type="number" min="0" value="0" class="qty"></td>
+                    <td class="subtotal">₱0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="billing-footer">
+            <div class="total-display">
+                <span class="label">Grand Total:</span>
+                <span id="totalAmount">₱0</span>
+            </div>
+            <button id="checkoutBtn">Complete Purchase</button>
+        </div>
+    </div>
+</section>
+
+<script src="billing.js"></script>
+</body>
+</html>

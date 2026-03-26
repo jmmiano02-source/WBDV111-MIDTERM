@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Backburner - NIKI </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+     <a href="home.html" class="logo">
+      <h2>Xeii's Music</h2>
+     </a>
+    <div class="search-container">
+        <input type="text" placeholder="Search songs, albums, artists">
+        <button>🔍</button>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+    <!-- OUTER LEFT -->
+    <div class="outer-left">
+        <h3>Up Next</h3>
+        <div class="song-info">
+             <a href="song1.html"><img src="cover.jpg" class="cover"></a>
+            <div>
+                <p>Fake Plastic Trees</p>
+                <p class="artist">Radiohead</p>
+            </div>
+        </div>
+        <div class="song-info">
+            <a href="song2.html"><img src="cover2.jpg" class="cover"></a>
+            <div>
+                <p>Backburner</p>
+                <p class="artist"></p>NIKI
+            </div>
+        </div>
+        <div class="song-info">
+              <a href="song3.html"><img src="cover3.jpg" class="cover"></a>
+            <div>
+                <p>Jonny</p>
+                <p class="artist">Faye Webster</p>
+            </div>
+        </div>
+        <!-- Add more songs here -->
+    </div>
+
+    <!-- CENTER -->
+    <div class="center">
+        <div class="inner-container">
+            <div class="inner-left">
+                <img src="cover2.jpg" alt="Song Cover">
+            </div>
+            <div class="inner-right" id="lyrics">
+                <p></p>
+               <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MUSIC PLAYER -->
+<div class="player">
+    <div class="song-info">
+      <img src="cover2.jpg" class="cover">
+      <div>
+        <p><strong>Backburner</strong></p>
+        <p>NIKI</p>
+      </div>
+    </div>
+
+    <div class="controls">
+    <a href="song1.html">
+        <button onclick="prevSong()">⏮</button>
+      </a>
+      <button onclick="playPause()" id="playBtn">▶</button>
+      <a href="song3.html">
+        <button onclick="nextSong()">⏭</button>
+      </a>
+      <input type="range" id="progress" value="0">
+    </div>
+
+    <div class="volume">
+      🔊
+      <input type="range" id="volume" min="0" max="1" step="0.1">
+    </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="audio" src="song2.mp3" autoplay></audio>
+<script src="script.js"></script>
+
+</body>
+</html>

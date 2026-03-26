@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fake Plastic Trees - Radiohead</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <a href="home.html" class="logo">
+      <h2>CCS MUSIC</h2>
+    </a> 
+    <div class="search-container">
+        <input type="text" placeholder="Search songs, albums, artists">
+        <button>🔍</button>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+    <!-- OUTER LEFT -->
+    <div class="outer-left">
+        <h3>Up Next</h3>
+        <div class="song-info">
+             <a href="song1.html"><img src="cover.jpg" class="cover"></a>
+            <div>
+                <p>Fake Plastic Trees</p>
+                <p class="artist">Radiohead</p>
+            </div>
+        </div>
+        <div class="song-info">
+            <a href="song2.html"><img src="cover2.jpg" class="cover"></a>
+            <div>
+                <p>Backburner</p>
+                <p class="artist">NIKI</p>
+            </div>
+        </div>
+        <div class="song-info">
+              <a href="song3.html"><img src="cover3.jpg" class="cover"></a>
+            <div>
+                <p>Jonny</p>
+                <p class="artist">Faye Webster</p>
+            </div>
+        </div>
+        <!-- Add more songs here -->
+    </div>
+
+    <!-- CENTER -->
+    <div class="center">
+        <div class="inner-container">
+            <div class="inner-left">
+                <img src="cover.jpg" alt="Song Cover">
+            </div>
+            <div class="inner-right" id="lyrics">
+                <p>Her green plastic watering can</p>
+                <p>For her fake Chinese rubber plant</p>
+                <p>In the fake plastic earth</p>
+                <br>
+                <p>That she bought from a rubber man</p>
+                <p>In a town full of rubber plans</p>
+                <p>To get rid of itself</p>
+                <br>
+                <p>It wears her out</p>
+                <p>It wears her out</p>
+                <p>It wears her out</p>
+                <p>It wears her out</p>
+                <br>
+                <p>She lives with a broken man</p>
+                <p>A cracked polystyrene man</p>
+                <p>Who just crumbles and burns</p>
+				<br>
+                <p>He used to do surgery</p>	
+				<p>For girls in the eighties</p>
+				<p>But gravity always wins</p>
+                <br>
+                <p>And it wears him out</p>
+				<p>It wears him out</p>
+				<p>It wears him out</p>
+				<p>It wears</p>
+				<br>
+				<p>She looks like the real thing</p>
+				<p>She tastes like the real thing</p>
+				<p>My fake plastic love</p>
+				<br>
+				<p>But I can't help the feeling</p>
+				<p>I could blow through the ceiling</p>
+				<p>If I just turn and run</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MUSIC PLAYER -->
+<div class="player">
+    <div class="song-info">
+      <img src="cover.jpg" class="cover">
+      <div>
+        <p><strong>Fake Plastic Trees</strong></p>
+        <p>Radeohead</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <a href="song1.html">
+        <button onclick="prevSong()">⏮</button>
+      </a>
+      <button onclick="playPause()" id="playBtn">▶</button>
+      <a href="song2.html">
+        <button onclick="nextSong()">⏭</button>
+      </a>
+      <input type="range" id="progress" value="0">
+    </div>
+
+    <div class="volume">
+      🔊
+      <input type="range" id="volume" min="0" max="1" step="0.1">
+    </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="audio" src="song.mp3" autoplay></audio>
+<script src="script.js"></script>
+
+</body>
+</html>

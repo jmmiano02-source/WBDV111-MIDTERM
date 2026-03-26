@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCS Music</title>
+<style>
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    padding-bottom: 100px; /* space for player */
+	background-image: url(bg.jpg);
+    background-size: cover;      
+    background-position: center;  
+    background-attachment: fixed; 
+}
+
+/* HEADER */
+.header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: #181818;
+    box-sizing: border-box;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.header .logo:hover {
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    width: 400px;
+    max-width: 100%;
+    background-color: #212121;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.search-container button {
+    background-color: #303030;
+    border: none;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* LEFT SIDEBAR */
+.outer-left {
+    width: 200px;
+    background: #1e1e1e;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: calc(100vh - 75px); /* full height minus header */
+}
+
+.outer-left a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.outer-left a:hover {
+    background: #333;
+}
+
+/* CENTER */
+.center {
+    flex: 1;
+    padding: 30px;
+}
+
+.center h1 {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.center p {
+    font-size: 18px;
+    color: #aaa;
+}
+
+/* MUSIC GRID */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.music-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.music-card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.music-card:hover {
+    transform: scale(1.05);
+}
+
+.music-card .title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.music-card .artist {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* PLAYER */
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+.player .cover {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <a href="home.html" class="logo">Xeii's Music</a>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search songs, albums, artists">
+        <button>🔍</button>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+    <!-- LEFT SIDEBAR -->
+    <div class="outer-left">
+        <a href="home.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="library.html">Library</a>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center">
+        <h1>Listen Again!</h1>
+        <p>Your recently played songs and albums</p>
+
+        <div class="music-grid">
+            <!-- Music Tile Example -->
+            <div class="music-card">
+               <a href="song1.html"><img src="cover.jpg" alt="Cover"></a>
+                <div class="title">Fake Plastic Trees</div>
+                <div class="artist">Radiohead</div>
+            </div>
+
+            <div class="music-card">
+                <a href="song2.html"><img src="cover2.jpg" alt="Cover"></a>
+                <div class="title">Backburner</div>
+                <div class="artist">NIKI</div>
+            </div>
+
+            <div class="music-card">
+                <a href="song3.html"><img src="cover3.jpg" alt="Cover"></a>
+                <div class="title">Jonny</div>
+                <div class="artist">Faye Webster</div>
+            </div>
+
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

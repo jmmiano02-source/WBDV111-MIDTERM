@@ -1,0 +1,50 @@
+STOCKMASTER SITEMAP
+--------------------
+
+[MAIN CONSOLE] (index.html)
+|
+|--- [HERO SECTION]
+|    L (Operational Overview & Navigation)
+|
+|--- [MODULE PREVIEWS]
+|    |--- POS Terminal Link
+|    |--- Supply Chain Link
+|    L--- Performance Link
+|
+|--- [INVENTORY AUDIT] (Action Button)
+|--- [DATA EXPORTS] (Secondary Button)
+
+[POINT OF SALE] (retail.html)
+|
+|--- [TRANSACTION SECTION]
+|    L New Checkout Utility
+|
+|--- [INVOICING SECTION]
+|    L Find Receipt / PDF Generator
+|
+|--- [REGISTER CLOSE]
+|    L Daily Sales Tally
+
+[LOGISTICS & SUPPLY] (inventory.html)
+|
+|--- [STOCK OPERATIONS]
+|    |--- Active SKU List
+|    |--- Vendor Directory
+|    L--- Purchase Order Tracking
+|
+|--- [ASSET STATUS TABLE]
+     |--- SKU / Item Name
+     |--- Department
+     |--- On Hand Count
+     L--- Condition Status
+
+[ANALYTICS] (reports.html)
+|
+|--- [FINANCIAL REPORTING]
+|    L Revenue Ledger (CSV Export)
+|
+|--- [STOCK TRENDS]
+|    L Inventory Velocity Analysis
+|
+|--- [VENDOR METRICS]
+     L Supplier Reliability Scorecards

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Logistics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">StockMaster</div>
+    <nav class="navbar">
+      <a href="index.html">Main Console</a>
+      <a href="retail.html">Point of Sale</a>
+      <a href="inventory.html" class="active">Logistics & Supply</a>
+      <a href="reports.html">Analytics</a>
+    </nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Warehouse Operations</h1>
+      <p>Operational oversight for all physical assets and procurement.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h2>Active SKUs</h2>
+        <p>Current count of all cataloged items on the floor.</p>
+        <button class="btn action-btn" onclick="showMessage('Opening Master SKU List')">View All</button>
+      </div>
+
+      <div class="card">
+        <h2>Vendors</h2>
+        <p>Authorized manufacturer and distributor directory.</p>
+        <button class="btn action-btn" onclick="showMessage('Loading Vendor Directory')">Contact List</button>
+      </div>
+
+      <div class="card">
+        <h2>Purchase Orders</h2>
+        <p>Fulfillment status for inbound shipments and backorders.</p>
+        <button class="btn action-btn" onclick="showMessage('Opening Order Queue')">Track POs</button>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Current Asset Status</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>SKU / Item</th>
+            <th>Department</th>
+            <th>On Hand</th>
+            <th>Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Steel Bolts (M12)</td>
+            <td>Fasteners</td>
+            <td>120</td>
+            <td>In Stock</td>
+          </tr>
+          <tr>
+            <td>Safety Gloves (XL)</td>
+            <td>PPE</td>
+            <td>45</td>
+            <td>Reorder Soon</td>
+          </tr>
+          <tr>
+            <td>Industrial Enamel</td>
+            <td>Coatings</td>
+            <td>80</td>
+            <td>In Stock</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

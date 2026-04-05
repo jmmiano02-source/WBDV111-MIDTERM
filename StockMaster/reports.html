@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Analytics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">StockMaster</div>
+    <nav class="navbar">
+      <a href="index.html">Main Console</a>
+      <a href="retail.html">Point of Sale</a>
+      <a href="inventory.html">Logistics & Supply</a>
+      <a href="reports.html" class="active">Analytics</a>
+    </nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>System Analytics</h1>
+      <p>Data visualization and historical record keeping.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h2>Revenue Ledger</h2>
+        <p>Breakdown of gross income and tax liabilities.</p>
+        <button class="btn action-btn" onclick="showMessage('Compiling Financial Ledger')">Export CSV</button>
+      </div>
+
+      <div class="card">
+        <h2>Turnover Rate</h2>
+        <p>Analysis of item movement speed and shelf-life.</p>
+        <button class="btn action-btn" onclick="showMessage('Calculating Stock Velocity')">View Trends</button>
+      </div>
+
+      <div class="card">
+        <h2>Vendor Reliability</h2>
+        <p>Performance metrics for delivery times and item quality.</p>
+        <button class="btn action-btn" onclick="showMessage('Loading Supplier Metrics')">Scorecards</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

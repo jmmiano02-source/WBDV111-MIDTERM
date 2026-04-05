@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Control Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">StockMaster</div>
+    <nav class="navbar">
+      <a href="index.html" class="active">Main Console</a>
+      <a href="retail.html">Point of Sale</a>
+      <a href="inventory.html">Logistics & Supply</a>
+      <a href="reports.html">Analytics</a>
+    </nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Facility Inventory Control</h1>
+      <p>
+        Real-time tracking for hardware, raw materials, and fulfillment status.
+      </p>
+      <div class="hero-buttons">
+        <a href="inventory.html" class="btn action-btn">Inventory Audit</a>
+        <a href="reports.html" class="btn secondary-btn">Data Exports</a>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h2>POS Terminal</h2>
+        <p>Process floor sales, generate invoices, and log cash flow.</p>
+        <a href="retail.html" class="btn action-btn">Enter Terminal</a>
+      </div>
+
+      <div class="card">
+        <h2>Supply Chain</h2>
+        <p>Update item counts, manage vendor contacts, and restock levels.</p>
+        <a href="inventory.html" class="btn action-btn">Stock Registry</a>
+      </div>
+
+      <div class="card">
+        <h2>Performance</h2>
+        <p>Review movement history and current asset valuation.</p>
+        <a href="reports.html" class="btn action-btn">Audit Logs</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

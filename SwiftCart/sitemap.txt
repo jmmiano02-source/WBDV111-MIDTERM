@@ -1,0 +1,25 @@
+SwiftCart Sitemap 
+
+[ LOGIN PAGE ] (login.html)
+             |
+             |--------------------------|
+             ▼                          ▼
+      [ USER ACCESS ]            [ ADMIN ACCESS ]
+             |                          |
+             ▼                          ▼
+      [ PRODUCT CATALOG ]        [ ADMIN DASHBOARD ]
+        (index.html)               (admin.html)
+             |                          |
+             |--- Search/Filters        |--- Sales Stats
+             |                          |--- Order Management
+             ▼                          |--- Add Products
+       [ SHOPPING CART ]                
+         (cart.html)                    
+             |                          
+             ▼                          
+       [ CHECKOUT ]                     
+       (checkout.html)                  
+             |                          
+             ▼                          
+      [ ORDER STATUS ]                  
+        (status.html)

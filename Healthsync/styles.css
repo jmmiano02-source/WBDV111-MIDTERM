@@ -1,0 +1,88 @@
+:root {
+  --bg: #0d0f0d;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --border: rgba(190, 242, 94, 0.25);
+  --text: #ffffff;
+  --muted: #94a3b8;
+  --primary: #bef264;
+  --primary-glow: rgba(190, 242, 94, 0.3);
+  --radius-xl: 20px;
+  --radius-md: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at 2% 2%, rgba(190, 242, 94, 0.08) 0%, transparent 40%);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.card, .wizard-card, .side-card, .panel, .login-panel {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+}
+
+.brand-mark {
+  background: var(--primary);
+  color: #000;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.nav-button, .submit-button, .primary-link, .logout-button {
+  background: var(--primary) !important;
+  color: #000 !important;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-button:hover, .submit-button:hover {
+  background: #d9f99d !important;
+  transform: translateY(-1px);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: white;
+  padding: 0.9rem;
+  width: 100%;
+  outline: none;
+}
+
+.choice-card.active, .doctor-card.active {
+  border-color: var(--primary) !important;
+  background: rgba(190, 242, 94, 0.12) !important;
+}
+
+.glow {
+  background: radial-gradient(circle, rgba(190, 242, 94, 0.15) 0%, transparent 70%);
+}

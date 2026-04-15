@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-protected-role="user">
+  <header class="portal-header" style="padding: 2rem; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="brand-mark">HS</div>
+      <h1>HealthSync</h1>
+    </div>
+    <button class="nav-button" data-logout>Log Out</button>
+  </header>
+
+  <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+    <section class="panel">
+      <p class="eyebrow">Overview</p>
+      <h2>Hello, <span data-auth-name></span>.</h2>
+      <p style="color: var(--muted);">Manage your health records and upcoming clinic visits from this portal.</p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem;">
+      <article class="panel">
+        <h3>Appointments</h3>
+        <p style="color: var(--muted); margin-bottom: 1.5rem;">Need to see a doctor? Schedule your next visit in a few simple steps.</p>
+       <a href="index.html#wizard" class="nav-button">Book Now</a>
+      </article>
+
+      <article class="panel">
+        <h3>Medical Records</h3>
+        <p style="color: var(--muted);">Your personal information and insurance details are verified and up to date.</p>
+      </article>
+    </div>
+  </main>
+
+  <script src="state.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

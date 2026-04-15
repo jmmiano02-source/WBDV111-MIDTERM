@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | HealthSync</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-page="login">
+  <header class="portal-header" style="padding: 2rem; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="brand-mark">HS</div>
+      <h1>HealthSync</h1>
+    </div>
+  </header>
+
+  <main style="display: flex; justify-content: center; align-items: center; padding: 4rem 2rem;">
+    <article class="login-panel" style="width: 100%; max-width: 450px;">
+      <p class="eyebrow">Secure Access</p>
+      <h2>Welcome back</h2>
+      <p style="color: var(--muted); margin-bottom: 2rem;">Please enter your account details to access your dashboard.</p>
+
+      <form id="loginForm">
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Username</label>
+          <input id="username" type="text" placeholder="Your username">
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Password</label>
+          <input id="password" type="password" placeholder="••••••••">
+        </div>
+        <button class="submit-button" type="submit" style="width: 100%;">Sign In</button>
+        <p id="loginStatus" class="status-note"></p>
+      </form>
+    </article>
+  </main>
+
+  <script src="state.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
